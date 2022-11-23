@@ -14,11 +14,29 @@ const connect = function() {
   conn.on("data", (data) => {
     console.log(data);
   });
-  //
+  //Prints a message to terminal and adds name to the server
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: WRM");
+    // setTimeout(() => conn.write("Move: up"), 500);
+    // setTimeout(() => conn.write("Move: left"), 600);
+    // setTimeout(() => conn.write("Move: down"), 900);
+    // setTimeout(() => conn.write("Move: down"), 1100);
+    // setTimeout(() => conn.write("Move: left"), 1300);
+    
   });
+  //Sends a message to the server
+  //conn.on("connect", () => {
+
+
+  //});
+  //
+
+
+
+
+
+
 
   return conn;
 };
