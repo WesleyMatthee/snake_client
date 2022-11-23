@@ -1,4 +1,5 @@
 // setup interface to handle user input from stdin
+let connection;
 
 const setupInput = function(conn) {
   const stdin = process.stdin;
@@ -11,7 +12,6 @@ const setupInput = function(conn) {
   return stdin;
 };
 // Stores the active TCP connection object.
-let connection;
 
 const handleUserInput = function(key) {
   //'\u0003' is cntl+c which exits the server
@@ -29,6 +29,17 @@ const handleUserInput = function(key) {
   }
   if (key === 'd') {
     console.log('d');
+  }
+  if (key === '1') {
+    
+    connection.write("Say: Skadoosh!");
+  }
+  if (key === '2') {
+    connection.write("Say: Blurp!");
+  }
+  if (key === '3') {
+    connection.write("Say: Zoink!");
+    
   }
 };
 
